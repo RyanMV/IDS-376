@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Propinastico</string>
+    <string name="propinastico">Propinastico</string>
+    <string name="excelente">Excelente</string>
+    <string name="redondear">Redondear</string>
+    <string name="con_propina_pero_denunciado">Con propina pero denunciado</string>
+    <string name="monto_de_propina">Monto de propina: %s</string>
+    <string name="monto">Monto</string>
+    <string name="calcular">Calcular</string>
+    <string name="lo_intento_el_pana">Lo intento el pana</string>
+    <string name="cuanto_va_a_dar_de_propina">Cuanto va a dar de propina?</string>
+</resources>
