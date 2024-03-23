@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Blur-O-Matic</string>
+    <string name="blur_title">Selecciona que tan borrosa estara la imagen</string>
+    <string name="select_image">Selecciona la Imagen</string>
+    <string name="go">Empezar proceso</string>
+    <string name="see_file">Ver Archivo</string>
+    <string name="description_image">Imagen para poner borrosa.</string>
+    <string name="blur_lv_1">Un poco borrosa</string>
+    <string name="blur_lv_2">Mas borrosa</string>
+    <string name="blur_lv_3">Lo mas borroso posible</string>
+    <string name="cancel_work">Cancelar proceso</string>
+    <string name="set_permissions_in_settings">Ve a Opciones -> Apps y Notificaciones ->
+        WorkManager Demo -> Permisos de la app y aprueba el almacenamiento.</string>
+</resources>
