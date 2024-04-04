@@ -15,3 +15,11 @@ fun makeDecorations() {
     println (decoration1.equals(decoration2))
     println (decoration3.equals(decoration2))
 }
+
+class Choice {
+    companion object {
+        var name: String = "lyric"
+        fun showDescription(name:String) = println("My favorite $name")
+    }
+}
+
