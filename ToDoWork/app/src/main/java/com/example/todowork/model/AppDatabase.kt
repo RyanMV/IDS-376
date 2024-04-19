@@ -1,11 +1,9 @@
-package com.example.todowork.models
+package com.example.todowork.model
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.todowork.dao.TaskDao
-import com.example.todowork.dao.UserDao
-import com.example.todowork.entities.TaskEntity
-import com.example.todowork.entities.UserEntity
+import com.example.todowork.database.TaskDao
+import com.example.todowork.database.UserDao
 
 @Database(entities = [UserEntity::class, TaskEntity::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {

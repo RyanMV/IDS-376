@@ -1,4 +1,4 @@
-package com.example.todowork.models
+package com.example.todowork.model
 
 class Task(
     val id: Int,

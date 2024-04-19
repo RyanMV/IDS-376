@@ -1,10 +1,10 @@
-package com.example.todowork.dao
+package com.example.todowork.database
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.example.todowork.entities.UserEntity
+import com.example.todowork.model.UserEntity
 
 @Dao
 interface UserDao {

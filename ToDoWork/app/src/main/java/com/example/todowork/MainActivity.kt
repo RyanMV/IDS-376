@@ -1,26 +1,36 @@
 package com.example.todowork
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.room.PrimaryKey
-import androidx.room.Room
-import com.example.todowork.entities.UserEntity
+import androidx.lifecycle.ViewModelProvider
+import com.example.todowork.database.TaskDatabase
+import com.example.todowork.repository.TaskRepository
+import com.example.todowork.viewmodel.TaskViewModel
+import com.example.todowork.viewmodel.TaskViewModelFactory
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var taskViewModel:TaskViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.fragment_home)
 
-
-        val boton: ImageButton = findViewById(R.id.imageButton4)
-        boton.setOnClickListener {
-            val intent: Intent = Intent(this,CreacionTicket::class.java)
-            startActivity(intent)
+// Inicializacion de version 0.5.0
+//        val boton: ImageButton = findViewById(R.id.imageButton4)
+//        boton.setOnClickListener {
+//            val intent: Intent = Intent(this,CreacionTicket::class.java)
+//            startActivity(intent)
+//        }
+//        val dataBase = Room.databaseBuilder(this,DBPruebas::Class.java, "usuario").build()
+//
+//        dataBase.UserDao().insertUser(UserEntity(1,"Ryan","correo","clave"))
+        setupViewModel()
         }
-        val dataBase = Room.databaseBuilder(this,DBPruebas::Class.java, "usuario").build()
+        private fun setupViewModel(){
+            val taskRepository = TaskRepository(TaskDatabase(this))
+            val viewModelProviderFactory = TaskViewModelFactory(application,taskRepository)
+            taskViewModel = ViewModelProvider(this,viewModelProviderFactory)[TaskViewModel::class.java]
 
-        dataBase.UserDao().insertUser(UserEntity(1,"Ryan","correo","clave"))
     }
 }
